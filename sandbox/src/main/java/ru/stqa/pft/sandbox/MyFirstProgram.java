@@ -25,9 +25,7 @@ public static void main(String[] args) {
         e.printStackTrace();
     }
     y = Integer.parseInt(or);
-    Point pointA = new Point();
-    pointA.x = x;
-    pointA.y = y;
+    Point pointA = new Point(x,y);
     System.out.println("Введите координаты второй точки:");
     try {
         ab = reader.readLine();
@@ -41,9 +39,7 @@ public static void main(String[] args) {
         e.printStackTrace();
     }
     y = Integer.parseInt(or);
-    Point pointB = new Point();
-    pointB.x = x;
-    pointB.y = y;
+    Point pointB = new Point(x,y);
     System.out.println("Расстояние между точками "+pointA+" и "+pointB+" равно");
     System.out.print("Вычисление через функцию: ");
     System.out.format("%.3f%n", distance(pointA, pointB));
