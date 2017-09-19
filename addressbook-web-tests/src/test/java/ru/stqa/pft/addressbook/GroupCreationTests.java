@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
 import static org.openqa.selenium.OutputType.*;
 
-public class GropCreationTests {
+public class GroupCreationTests {
     FirefoxDriver wd;
     
     @BeforeMethod
@@ -24,14 +24,14 @@ public class GropCreationTests {
     }
     
     @Test
-    public void GropCreationTests() {
+    public void GroupCreationTests() {
         wd.get("http://localhost/addressbook/");
         wd.findElement(By.name("user")).click();
-        wd.findElement(By.name("user")).clear();
+        //wd.findElement(By.name("user")).clear();
         wd.findElement(By.name("user")).sendKeys("admin");
         wd.findElement(By.id("LoginForm")).click();
         wd.findElement(By.name("pass")).click();
-        wd.findElement(By.name("pass")).clear();
+        //wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys("secret");
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
         wd.findElement(By.linkText("groups")).click();
